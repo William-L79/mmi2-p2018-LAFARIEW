@@ -11,6 +11,11 @@ h1 {
   color: brown;
   font-family: "Roboto", Arial;
   @include hoverable();
-
+  @include medium{
+    color:red;
+  }
+  @include large{
+    color:black;
+  }
 
 }
