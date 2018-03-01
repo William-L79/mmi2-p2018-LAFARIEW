@@ -1,5 +1,6 @@
 @import 'blocs/header';
 @import 'blocs/footer';
+@import  'mixins';
 
 @font-face {
  font-family: "Roboto";
@@ -9,8 +10,7 @@
 h1 {
   color: brown;
   font-family: "Roboto", Arial;
+  @include hoverable();
 
-  &:hover {
-    color: green;
-  }
+
 }
