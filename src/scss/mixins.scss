@@ -9,9 +9,17 @@
     color:blue;
   }
 }
-
-$medium: 600px;
+$small: 320px;
+$medium: 768px;
 $large: 1024px;
+
+@mixin small(){
+  @media (min-width: #{$small}) {
+    @content;
+
+  }
+}
+
 
 @mixin medium(){
   @media (min-width: #{$medium}) {

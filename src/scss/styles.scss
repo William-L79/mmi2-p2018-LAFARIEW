@@ -1,21 +1,63 @@
+//==================================================== IMPORT =======================================================
+
 @import 'blocs/header';
 @import 'blocs/footer';
 @import  'mixins';
 
+//==================================================== FONTS ======================================================
+
 @font-face {
  font-family: "Roboto";
- src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+ src: url("../fonts/nes/NES_Controller.ttf") format("truetype");
 }
 
-h1 {
-  color: brown;
-  font-family: "Roboto", Arial;
-  @include hoverable();
-  @include medium{
-    color:red;
-  }
-  @include large{
-    color:black;
-  }
+//==================================================== ALL =======================================================
+
+*{
+  box-sizing:border-box;
+  padding:0;
+  margin:0;
+  text-decoration:none;
+  list-style:none;
+}
+
+html{
+  width:100%;
+  height:100%;
+}
+
+body{
+  width:100%;
+  height:100%;
+}
+
+
+//==================================================== SECTION HOME =======================================================
+.home{
+  width:100%;
+  height:85%;
+  background-color:red;
 
 }
+
+
+//==================================================== SECTION PRODUIT =======================================================
+.produit{
+  width:100%;
+  height:100%;
+  background-color:blue;
+
+}
+
+//==================================================== SECTION ARGUMENTS =======================================================
+.arguments{
+  width:100%;
+  height:100%;
+  background-color:orange;
+
+}
+
+
+//==================================================== SECTION JEUX =======================================================
+
+
