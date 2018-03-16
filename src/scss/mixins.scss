@@ -1,17 +1,6 @@
-
-@mixin size ($width, $height){
-  width : $width;
-  height : $height;
-}
-
-@mixin hoverable (){
-  &:hover{
-    color:blue;
-  }
-}
-$small: 320px;
-$medium: 768px;
-$large: 1024px;
+$small: 550px;
+$medium: 980px;
+$large: 980px;
 
 @mixin small(){
   @media (min-width: #{$small}) {

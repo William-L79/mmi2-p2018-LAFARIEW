@@ -7,57 +7,200 @@
 //==================================================== FONTS ======================================================
 
 @font-face {
- font-family: "Roboto";
+ font-family: "Nes";
  src: url("../fonts/nes/NES_Controller.ttf") format("truetype");
+}
+
+@font-face {
+ font-family: "Peace";
+ src: url("../fonts/Peace-Sans.ttf") format("truetype");
+}
+
+@font-face {
+ font-family: "8bit";
+ src: url("../fonts/8bitwonder.ttf") format("truetype");
 }
 
 //==================================================== ALL =======================================================
 
 *{
-  box-sizing:border-box;
-  padding:0;
-  margin:0;
-  text-decoration:none;
-  list-style:none;
+  box-sizing: border-box;
+  margin:0px;
+  padding:0px;
+  text-decoration: none;
+  list-style: none;
 }
 
 html{
-  width:100%;
   height:100%;
 }
 
 body{
-  width:100%;
   height:100%;
+  position:relative;
+  &::-webkit-scrollbar { width: 0 !important } //On enlève la barre de scroll du navigateur
 }
 
 
 //==================================================== SECTION HOME =======================================================
-.home{
-  width:100%;
-  height:85%;
-  background-color:red;
+@include small{
 
 }
+
+
+
+.home{
+  width:100%;
+  height:100%;
+  background:url('./../img/homeImg.jpg') no-repeat center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  position:relative;
+
+
+}
+
+.home__slide{
+  width:20%;
+  min-width:325px;
+  min-height:430px;
+  height:42%;
+  display: none;
+  opacity:0;
+  position:relative;
+  justify-content:flex-start;
+  align-items:center;
+
+}
+
+
+.home__texte{
+  font-family:'Peace';
+  text-transform:uppercase;
+  color:white;
+  font-size:6rem;
+  border-bottom: 5px solid #f02933;
+
+  span{
+    color:#f02933;
+  }
+}
+
+
+.home__scroll,
+.home__scroll:before {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+}
+.home__scroll {
+  width: 40px;
+  min-width:40px;
+  height: 70px;
+  min-height:70px;
+  margin-left: -20px;
+  margin-top: -35px;
+  -webkit-box-shadow: inset 0 0 0 1px #fff;
+          box-shadow: inset 0 0 0 1px #fff;
+  border-radius: 25px;
+
+  &:before{
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    margin-left: -4px;
+    top: 8px;
+    border-radius: 4px;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-name: scroll;
+            animation-name: scroll;
+  }
+}
+
+
+@-webkit-keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(46px);
+            transform: translateY(46px);
+  }
+}
+@keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(46px);
+            transform: translateY(46px);
+  }
+}
+
+
+
 
 
 //==================================================== SECTION PRODUIT =======================================================
 .produit{
   width:100%;
-  height:100%;
-  background-color:blue;
+  height:80%;
+  background-color:white;
+
 
 }
+
 
 //==================================================== SECTION ARGUMENTS =======================================================
 .arguments{
   width:100%;
-  height:100%;
+  height:65%;
   background-color:orange;
 
 }
 
 
 //==================================================== SECTION JEUX =======================================================
+.jeux{
+  width:100%;
+  height:65%;
+  background-color:red;
+
+}
+
+
+
+
+//==================================================== SPACERS =======================================================
+
+#spacer {
+    background: url(../img/mario.png) 50% 0 no-repeat fixed;
+    color: #fff;
+    height: 500px;
+    margin: 0;
+    padding: 200px 0 260px;
+    background-size: cover
+}
+
+#spacer2{
+    background: url(../img/zelda.png) 50% 0 no-repeat fixed;
+    color: #fff;
+    height: 500px;
+    margin: 0;
+    padding: 200px 0 260px;
+    background-size: cover
+}
+
+
+
 
 
