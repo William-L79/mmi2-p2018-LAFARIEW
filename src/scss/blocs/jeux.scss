@@ -1,0 +1,28 @@
+.jeux {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('./../img/star.jpg');
+}
+
+.jeux__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.jeux__text {
+  font-family: '8bit';
+  font-size: 1rem;
+  color: white;
+  margin: 20px 0;
+  width: 75%;
+  text-align: center;
+}
+
+.jeux__picto:hover {
+  opacity: 0.8;
+}
